@@ -24,3 +24,45 @@
 # Github Fork (repozitorija kopija) - https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 # Klonēt repozitoriju - hhttps://code.visualstudio.com/docs/sourcecontrol/intro-to-git
 
+#Artjoms Petrovs
+
+
+player1 = input()
+player1a = 1
+player2a = 1
+
+lauciņi = 100
+lauciņa18 = 18
+lauciņa67 = 67
+lauciņa80 = 80
+lauciņa74 = 74
+lauciņa15 = 15
+lauciņa39 = 39
+lauciņa33 = 33
+lauciņa87 = 87
+
+if player1 == "go":
+    import random
+    print(random.randint(1, 6))
+    a = (random.randint(1, 6))
+    
+    
+while player1a < 100:
+    print(player1a)
+    player1a += a
+    break
+
+player2 = input()
+
+if player2 == "go":
+    import random
+    print(random.randint(1, 6))
+    a = (random.randint(1, 6))
+    
+while player2a < 100:
+    print(player1a)
+    player1a += a
+    break 
+
+if player1a == 100:
+    print("player 1 wins")
