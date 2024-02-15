@@ -26,43 +26,95 @@
 
 #Artjoms Petrovs
 
+import random
 
-player1 = input()
-player1a = 1
-player2a = 1
-
-lauciņi = 100
-lauciņa18 = 18
-lauciņa67 = 67
-lauciņa80 = 80
-lauciņa74 = 74
-lauciņa15 = 15
-lauciņa39 = 39
-lauciņa33 = 33
-lauciņa87 = 87
-
-if player1 == "go":
-    import random
-    print(random.randint(1, 6))
-    a = (random.randint(1, 6))
+player1 = 1
+player2 = 1
+# raundi 
+for x in range(30):
+    input("player 1 your turn: ")
     
+    #spēlētāja 1 gājiens
+    player1 = player1 + random.randint(1,6)
+    print(player1)
+
+
+    input("player 2 your turn: ")
     
-while player1a < 100:
-    print(player1a)
-    player1a += a
-    break
-
-player2 = input()
-
-if player2 == "go":
-    import random
-    print(random.randint(1, 6))
-    a = (random.randint(1, 6))
+    #spēlētāja 2 gājiens
+    player2 = player2 + random.randint(1,6)
+    print(player2)
     
-while player2a < 100:
-    print(player1a)
-    player1a += a
-    break 
+    # -- zilas kāpnes ved uz leju, 18 -> 7, 67 -> 46 , 80 -> 69, 74 -> 63
+    if player2 == 18:
+        player2 = 7
+        print("player 2 moves to 7")
+    elif player2 == 67:
+        player2 = 46
+        print("player 2 moves to 46")
+    elif player2 == 80:
+        player2 = 69
+        print("player 2 moves to 69")
+    elif player2 == 74:
+        player2 = 63
+        print("player 2 moves to 63")
+    # -- sarkanas kāpnes ved uz augšu, 15 -> 24, 39 -> 48, 33 -> 52, 87 -> 96 
+    elif player2 == 15:
+        player2 = 24
+        print("player 2 moves to 24")
+    elif player2 == 39:
+        player2 = 48
+        print("player 2 moves to 48")
+    elif player2 == 33:
+        player2 = 52
+        print("player 2 moves to 52")
+    elif player2 == 87:
+        player2 = 96
+        print("player 2 moves to 96")
+    # -- zilas kāpnes ved uz leju, 18 -> 7, 67 -> 46 , 80 -> 69, 74 -> 63
+    if player1 == 18:
+        player1 = 7
+        print("player 1 moves to 7")
+    elif player1 == 67:
+        player1 = 46
+        print("player 1 moves to 46")
+    elif player1 == 80:
+        player1 = 69
+        print("player 1 moves to 69")
+    elif player1 == 74:
+        player1 = 63
+        print("player 1 moves to 63")
+    # -- sarkanas kāpnes ved uz augšu, 15 -> 24, 39 -> 48, 33 -> 52, 87 -> 96
+    elif player1 == 15:
+        player1 = 24
+        print("player 1 moves to 24")
+    elif player1 == 39:
+        player1 = 48
+        print("player 1 moves to 48")
+    elif player1 == 33:
+        player1 = 52
+        print("player 1 moves to 52")
+    elif player1 == 87:
+        player1 = 96
+        print("player 1 moves to 96")
+        
+    #pārbaudījums, lai noskaidrotu, kurš uzvar.
+    if player2 >= 100:
+        print("player 2 wins")
+        break
+    
+    #pārbaudījums, lai noskaidrotu, kurš uzvar.
+    if player1 >= 100:
+        print("player 1 wins")
+        break
+    
 
-if player1a == 100:
-    print("player 1 wins")
+#pārbaudījums, ja beidzas raundi - neizšķirts
+if player2 < 100 and player1 < 100:
+    print("draw")
+
+
+
+
+
+
